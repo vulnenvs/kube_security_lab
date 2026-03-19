@@ -18,7 +18,8 @@
     ansible_python_interpreter: /usr/bin/python3
     
   tasks:
+  - import_tasks: ./ansible_tasks/install_python3_raw.yml
   - import_tasks: ./ansible_tasks/setup_kubeconfig.yml
   - import_tasks: ./ansible_tasks/setup_ssh_pod.yml
-  - import_tasks: ./ansible_tasks/make_default_service_account_cluster_admin.yaml 
+  - import_tasks: ./ansible_tasks/make_default_service_account_cluster_admin.yaml
   - import_tasks: ./ansible_tasks/print_cluster_ip.yml
